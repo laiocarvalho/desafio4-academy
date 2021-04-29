@@ -1,0 +1,37 @@
+button {
+  cursor: pointer;
+  border: none;
+  height: 39px;
+  font-weight: 600;
+  border-radius: 20px;
+  margin: 15px;
+  background-color: transparent;
+
+  &:disabled {
+    opacity: 35%;
+  }
+}
+.primary-button {
+  width: 240px;
+  background-color: $thirdColor;
+  color: $primaryColor;
+}
+
+.secondary-button {
+  width: 150px;
+  background-color: $secondaryColor;
+  color: $primaryColor;
+}
+
+.unfilled-button {
+  background-color: $primaryColor;
+  color: $thirdColor;
+  border: 1px solid $thirdColor;
+}
+
+.botao-normal {
+  background-color: red;
+}
+.botao-normal:disabled {
+  background-color: #ccc;
+}
