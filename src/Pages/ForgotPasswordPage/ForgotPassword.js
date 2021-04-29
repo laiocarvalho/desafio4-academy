@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
+import { useForm } from 'react-hook-form';
 import Button from '../../Components/Buttons/Button';
 import LogoAcademy from '../../Assets/Images/Logo-Academy.svg';
 import Mail from '../../Assets/Images/Mail.svg';
 export default function ForgotPassword() {
-  const [submit, setSubmit] = useState(true);
+  const [submit, setSubmit] = useState(false);
+  const { register, handleSubmit, watch } = useForm();
+  const email = watch('Email');
   return (
     <>
       <form className="container-form container-password-page">
@@ -30,12 +33,12 @@ export default function ForgotPassword() {
             <div className="container-form-wrapper-inputs">
               <label>E-mail</label>
               <br />
-              <input placeholder="exemplo@gmail.com" />
+              <input placeholder="exemplo@gmail.com" {...register('Email')} />
             </div>
             <Button
               text="Recuperar senha"
               className="primary-button form-button-logins-adjust-margin"
-              disabled
+              disabled={email ? false : true}
             />
           </>
         )}

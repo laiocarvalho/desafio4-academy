@@ -7,7 +7,7 @@ import Signup from './Pages/SignupPage/Signup';
 function App() {
   return (
     <div className="App">
-      <Signup />
+      <ForgotPassword />
     </div>
   );
 }

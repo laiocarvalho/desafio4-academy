@@ -1,10 +1,16 @@
 import React, { useState } from 'react';
+import { useForm } from 'react-hook-form';
 import Button from '../../Components/Buttons/Button';
 import LogoAcademy from '../../Assets/Images/Logo-Academy.svg';
 import ClosedEye from '../../Assets/Images/Closed-Eye.svg';
 import OpenEye from '../../Assets/Images/Open-Eye.svg';
+
 export default function Signup() {
   const [hiddenPassword, setHiddenPassword] = useState(false);
+  const { register, handleSubmit, watch } = useForm();
+  const nome = watch('Nome');
+  const email = watch('Email');
+  const password = watch('Password');
 
   return (
     <>
@@ -13,12 +19,12 @@ export default function Signup() {
         <div className="container-form-wrapper-inputs">
           <label>Nome</label>
           <br />
-          <input />
+          <input {...register('Nome')} />
         </div>
         <div className="container-form-wrapper-inputs">
           <label>E-mail</label>
           <br />
-          <input placeholder="exemplo@gmail.com" />
+          <input placeholder="exemplo@gmail.com" {...register('Email')} />
         </div>
         <div className="container-form-wrapper-inputs">
           <label>Senha</label>
@@ -27,6 +33,7 @@ export default function Signup() {
             <input
               placeholder="exemplo@gmail.com"
               type={hiddenPassword ? 'password' : 'text'}
+              {...register('Password')}
             />
             <button
               type="button"
@@ -40,7 +47,7 @@ export default function Signup() {
           className="primary-button form-button-logins-adjust-margin"
           text="Criar Conta"
           width="200px"
-          disabled={true}
+          disabled={email && nome && password ? false : true}
         />
       </form>
       <div className="signup-link-wrapper">

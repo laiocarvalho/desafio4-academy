@@ -1,10 +1,16 @@
 import React, { useState } from 'react';
+import { useForm } from 'react-hook-form';
 import LogoAcademy from '../../Assets/Images/Logo-Academy.svg';
 import ClosedEye from '../../Assets/Images/Closed-Eye.svg';
 import OpenEye from '../../Assets/Images/Open-Eye.svg';
 import Button from '../../Components/Buttons/Button';
+
 export default function Login() {
   const [hiddenPassword, setHiddenPassword] = useState(false);
+  const { register, handleSubmit, watch } = useForm();
+  const email = watch('Email');
+  const password = watch('Password');
+
   return (
     <>
       <form className="container-form">
@@ -12,7 +18,7 @@ export default function Login() {
         <div className="container-form-wrapper-inputs">
           <label>E-mail</label>
           <br />
-          <input placeholder="exemplo@gmail.com" />
+          <input placeholder="exemplo@gmail.com" {...register('Email')} />
         </div>
         <div className="container-form-wrapper-inputs">
           <label>Senha</label>
@@ -21,6 +27,7 @@ export default function Login() {
             <input
               placeholder="exemplo@gmail.com"
               type={hiddenPassword ? 'password' : 'text'}
+              {...register('Password')}
             />
             <button
               type="button"
@@ -37,6 +44,7 @@ export default function Login() {
           className="primary-button form-button-logins-adjust-margin"
           text="Entrar"
           width="166px"
+          disabled={email && password ? false : true}
         />
       </form>
       <div className="signup-link-wrapper">
