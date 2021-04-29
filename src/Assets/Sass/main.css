@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  color: black;
+}
+
+body {
+  background-color: #f7f7f7;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  height: 39px;
+  font-weight: 600;
+  border-radius: 20px;
+  margin: 15px;
+  background-color: transparent;
+}
+button:disabled {
+  opacity: 35%;
+}
+
+.primary-button {
+  width: 240px;
+  background-color: #da0175;
+  color: #ffffff;
+}
+
+.secondary-button {
+  width: 150px;
+  background-color: #374952;
+  color: #ffffff;
+}
+
+.unfilled-button {
+  background-color: #ffffff;
+  color: #da0175;
+  border: 1px solid #da0175;
+}
+
+.botao-normal {
+  background-color: red;
+}
+
+.botao-normal:disabled {
+  background-color: #ccc;
+}
+
+input::-ms-reveal,
+input::-ms-clear {
+  display: none;
+}
+
+input,
+.default-input {
+  background-color: transparent;
+  border: none;
+  padding: 14px 14px 14px 20px;
+  max-width: 90%;
+  width: 100%;
+  outline: none;
+  font-size: 1em;
+}
+
+.container-form {
+  box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.1);
+  min-height: 507px;
+  border-radius: 16px;
+  width: 405px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 35px;
+}
+
+.container-form-wrapper-inputs {
+  border-bottom: 1px solid #374952;
+  font-weight: bold;
+  max-width: 90%;
+  width: 100%;
+  margin-top: 60px;
+}
+.container-form-wrapper-inputs label {
+  margin-left: 20px;
+}
+
+.password-input-icon-container {
+  display: flex;
+  align-items: center;
+}
+.password-input-icon-container .default-input {
+  width: auto;
+}
+.password-input-icon-container button {
+  height: 100%;
+}
+
+.form-button-logins-adjust-margin {
+  margin-top: 88px;
+}
+
+.signup-link-wrapper {
+  text-align: center;
+  margin-top: 32px;
+}
+.signup-link-wrapper span {
+  color: #da0175;
+  border-bottom: 1px solid #da0175;
+}
+
+.forgot-password-container {
+  max-width: 90%;
+  width: 100%;
+  text-align: right;
+  margin-top: 20px;
+}
+.forgot-password-container span {
+  border-bottom: 1px solid black;
+}
+
+.container-password-page h3 {
+  margin-bottom: 24px;
+}
+
+.recovery-password-email-image {
+  margin-top: 60px;
+  margin-bottom: 25px;
+}
+
+.sent-email-message {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.container-form-recovery-password-text {
+  margin-top: 76px;
+}/*# sourceMappingURL=main.css.map */
