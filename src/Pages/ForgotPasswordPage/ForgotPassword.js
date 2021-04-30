@@ -3,10 +3,12 @@ import { useForm } from 'react-hook-form';
 import Button from '../../Components/Buttons/Button';
 import LogoAcademy from '../../Assets/Images/Logo-Academy.svg';
 import Mail from '../../Assets/Images/Mail.svg';
+
 export default function ForgotPassword() {
   const [submit, setSubmit] = useState(false);
   const { register, handleSubmit, watch } = useForm();
   const email = watch('Email');
+
   return (
     <>
       <form className="container-form container-password-page">

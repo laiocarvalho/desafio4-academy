@@ -1,0 +1,98 @@
+.Home-period-filter-div {
+  border-bottom: 1px solid black;
+  margin-top: 120px;
+  max-width: 100%;
+  width: 100%;
+  ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+  }
+  li {
+    margin-right: 56px;
+    padding: 10px;
+    border-bottom: 3px solid black;
+  }
+}
+
+.home-content-container {
+  max-width: 410px;
+  width: 100%;
+  box-shadow: 0px 4px 8px 2px #0000001a;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding-bottom: 55px;
+  header {
+    background-color: $secondaryColor;
+    color: $primaryColor;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 40px;
+    img {
+      margin-right: 10px;
+    }
+  }
+}
+
+.clients-charge-information-container {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 80%;
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  span {
+    padding: 0 20px;
+    font-weight: bold;
+  }
+  .number {
+    font-size: 2em;
+  }
+}
+
+.home-main-wrapper {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.profile-image {
+  position: absolute;
+  right: 40px;
+  top: 22px;
+}
+
+.home-chart-container {
+  margin-top: 88px;
+  height: 800px;
+  background-color: $primaryColor;
+  box-shadow: 0px 4px 8px 2px #0000001a;
+  border-radius: 16px;
+  header {
+    background-color: $secondaryColor;
+    color: $primaryColor;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    margin-bottom: 40px;
+    img {
+      margin-left: 80px;
+      margin-right: 20px;
+    }
+  }
+}

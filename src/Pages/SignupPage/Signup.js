@@ -8,6 +8,7 @@ import OpenEye from '../../Assets/Images/Open-Eye.svg';
 export default function Signup() {
   const [hiddenPassword, setHiddenPassword] = useState(false);
   const { register, handleSubmit, watch } = useForm();
+
   const nome = watch('Nome');
   const email = watch('Email');
   const password = watch('Password');
